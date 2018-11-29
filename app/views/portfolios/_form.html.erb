@@ -1,0 +1,52 @@
+<div class="row justify-content-md-center">
+<div class="col-md-8 about-us" >
+
+<%= form_for @portfolio do |f| %>
+<div class="row">
+  <div class="col-md-4">
+    <div>
+    <%= f.text_field :title, placeholder: 'Title', class: "form-control" %><br />
+    </div>
+
+    <div>
+    <%= f.text_field :subtitle, placeholder: 'Subtitle', class: "form-control" %><br />
+    </div>
+
+    <div>
+    <%= f.text_field :url, placeholder: 'URL', class: "form-control" %><br />
+    </div>
+  </div>
+
+  <div class="col-md-8">
+  <%= f.text_area :description, placeholder: 'Description', class: "form-control", rows: 6 %><br />
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="form-group col-md-6">
+  	<%= f.label :main_image, "Main Image" %><br />
+  	<%= f.file_field :main_image %>
+  </div>
+
+  <div class="form-group col-md-6">
+  	<%= f.label :thumbnail_image, "Thumbnail Image" %><br />
+  	<%= f.file_field :thumbnail_image %>
+  </div>
+</div>
+
+
+  <%= f.fields_for :technologies do |technology|  %>
+    <%= render 'technology_fields', f: technology %>
+  <% end %>
+
+
+<div> <%= link_to_add_association 'Add Technology', f, :technologies %> </div>
+<div> <%= link_to_add_association 'Add GalleryItem', f, :gallery_items %> </div>
+
+<p>NOTICE: THUMBNAIL IMAGE SIZES ARE PLACED IN A 208x124 AREA, IF IMAGES UPLOADED ARE A DIFFERENT ASPECT RATIO THEY WILL BE DISTORED</p>
+
+<%= f.submit 'Submit', class: "btn btn-outline-dark" %>
+
+<% end %>
+</div>
+</div>

@@ -1,0 +1,22 @@
+<h2 class="page-title"> <%= @blog.title.titleize %></h2>
+
+<div class="row justify-content-md-center">
+<% if logged_in?(:admin) %>
+
+<div class="about-us col-md-3 margin-20">
+	<h4>ADMIN OPTIONS</h4>
+	<%= link_to "Edit", edit_blog_path(@blog), class: "about-us pageinate" %>
+	<%= link_to "Delete", @blog, method: :delete, data:  {confirm: "Are you sure you want to delete?"},class: "about-us pageinate" %>
+	<%= link_to "#{@blog.status}", toggle_status_blog_path(@blog), class: "about-us pageinate #{@blog.status}" %>
+</div>
+<% end %>
+
+</div>
+<div class="row justify-content-md-center">
+
+
+<div class="col-md-9 about-us margin-20">
+<div class="alight-right"><%= markdown @blog.body %></div>
+</div>
+</div>
+</div>

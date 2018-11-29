@@ -1,0 +1,66 @@
+                <%= image_tag(
+                    "background.png",
+                    id: 'background',
+                    autoplay: true,
+                    loop: true,
+                    muted: true,
+                    poster: 'background.png'
+                ) 
+                %>
+
+<!-- <%= image_tag("logo.png") %> -->
+
+	<div class="col-md-9">
+			<div class="carousel slide carousel-height" id="carousel-920954">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-920954" class="active">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-920954">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-920954">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<%= image_tag("Dignity topper.jpg",
+						class: "w-100",
+						alt: "Carousel Bootstrap First")%>
+					</div>
+
+					<div class="carousel-item">
+						<%= image_tag("support tree topper.jpg",
+						class: "w-100",
+						alt: "Carousel Bootstrap First")%>
+					</div>
+					<div class="carousel-item">
+						<%= image_tag("tilt 1.jpg",
+						class: "w-100",
+						alt: "Carousel Bootstrap First")%>
+					</div>
+					<div class="carousel-item">
+						<%= image_tag("tilt 3.jpg",
+						class: "w-100",
+						alt: "Carousel Bootstrap First")%>
+					</div>
+					<div class="carousel-item">
+						<%= image_tag("Tree topper down.jpg",
+						class: "w-100",
+						alt: "Carousel Bootstrap First")%>
+					</div>
+				</div> <a class="carousel-control-prev" href="#carousel-920954" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-920954" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+			</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 about-us big-font">
+			<p class="big-font"><%= markdown "Sturdy Star
+
+Putting the Star on the Christmas tree is the Pinnicle of the Christmas season. but is usually met with fatigue as the tree topper tilts, falls or just slumps on the top of the tree.
+
+Give your tree topper all the lift it needs with the nearly invisable Sturdy Star.
+
+Sturdy Star is the fully adjustable easy to attach Tree Topper support.
+"%></p>
+			
+		</div>
+	</div>
+</div>

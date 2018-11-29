@@ -1,0 +1,22 @@
+<%= form_for @message, url: create_message_url do |f| %>
+<%= notice %>
+<%= @message.errors.full_messages.join(', ') %>
+<div class="row justify-content-md-center">
+  <div class="about-us col-md-9">
+    <h1>We are very excited to work with you!</h1>
+    <p>We Offer Full Stack Services in Web Application as well as Mobile Application Development</p>
+    <p>See our <%= link_to "Portfolio", portfolios_path %> for more details and samples of our work</p>
+    <div class="row justify-content-md-center">
+      <div class="col-md-4">
+        <p><%= f.text_field :name, placeholder: 'Name', class: "form-control" %></p>
+        <p><%= f.text_field :company, placeholder: 'Company', class: "form-control" %></p>
+        <p><%= f.email_field :email, placeholder: 'Email', class: "form-control" %></p>
+      </div>
+      <div class="col-md-8">
+        <p><%= f.text_area :project_description, placeholder: 'Project Description', size: '120x6', class: "form-control" %></p>
+      </div>
+    </div>
+    <%= f.submit 'Send', class: "btn btn-outline-dark" %>
+    <% end %>
+  </div>
+</div>

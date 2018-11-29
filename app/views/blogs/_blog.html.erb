@@ -1,0 +1,11 @@
+<div class="blog-post about-us">
+  <h2 class="blog-link"><%= link_to blog.title.upcase, blog %></h2>
+  <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
+
+  <p>
+    <%= markdown blog.body.truncate(250) %> <%= link_to "Continue Reading", blog %>
+  </p>
+  <p>
+  	<%= blog.name unless blog.name == nil%>
+  </p>
+</div>

@@ -1,0 +1,18 @@
+<div class="page-title">
+<h1>See what these people have to say about Sturdy Star!</h1>
+</div>
+
+<div class="row justify-content-md-center paginate-bar">
+<%= paginate @blogs %>
+</div>
+
+<div>
+<%= render @blogs %>
+</div>
+
+  <%= link_to "Add your own review", new_blog_path, class: "btn btn-outline-dark" %>
+
+<div class="row justify-content-md-center paginate-bar">
+<%= paginate @blogs %>
+</div>
+	

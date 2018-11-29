@@ -1,0 +1,10 @@
+	<a href="<%= portfolio_path(portfolio_item) %>">
+<div  class="col-md-4">
+  <div  class="card about-us portfolio-margin" data-id="<%= portfolio_item.id %>">
+    <%= image_tag portfolio_img(portfolio_item.thumbnail_image, 'thumb'), width: '100%', :class => "thumb-image-portfolio" %>
+    <p class="card-text">
+      <span><%= link_to portfolio_item.title, portfolio_path(portfolio_item) %></span> <%= portfolio_item.subtitle.truncate(20) %>
+    </p>
+  </div>
+</div>
+</a>

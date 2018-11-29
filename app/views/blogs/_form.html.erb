@@ -1,0 +1,43 @@
+<div class="row justify-content-md-center">
+  <div class="about-us">
+
+    <%= form_for @blog do |f| %>
+    <% notice %>
+    <div class="row justify-content-md-center">
+      <div class="col-md-4">
+        <%= f.text_field :title, placeholder: "Title", class: 'form-control' %><br />
+      </div>
+    </div>
+        <div class="row justify-content-md-center">
+      <div class="col-md-4">
+        <%= f.text_field :name, placeholder: "Name", class: 'form-control' %><br />
+      </div>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-11">
+        <%= f.text_area :body, row: 10, size: "80x10", placeholder: "Blog Body", class: 'form-control'%><br />
+      </div>
+
+    </div>
+    <%= f.submit "Submit", class: 'btn btn-outline-dark' %>
+  </div>
+  <%#= f.fields_for :gamplats do |gamplats_form| %>
+  <%#= render 'gamplat_fields', f: gamplats_form %>
+  <%# end %>
+
+  <div>
+    <%#= link_to_add_association 'Add New Platform', f, :gamplats %>
+  </div>
+  
+  <%#= f.fields_for :game_gallaries do |gallary_form|  %>
+  <%#= render 'game_gallary_fields', f: gallary_form %>
+  <%# end %>
+
+  <div>
+    <%#= link_to_add_association 'Add New Gallery Item', f, :game_gallaries %>
+  </div>
+
+  
+  <% end %>
+</div>
+</div>

@@ -1,0 +1,29 @@
+<%= form_for @support, url: create_support_url do |f| %>
+<%= notice %>
+<%= @support.errors.full_messages.join(', ') %>
+<div class="row justify-content-md-center">
+  <div class="about-us col-md-8">
+    <div> Phone: (801) 558 4126 </div>
+    <div> Mailing: 11448 S 1380 E Sandy, UT 84092</div>
+    <div>(Please allow up to 24 hours for a reply)</div>
+    <div>
+      <div class="row justify-content-md-center page-title">
+        <div class="col-md-6">
+          <p><%= f.text_field :name, placeholder: 'Name', class: "form-control" %></p>
+        </div>
+        <div class="col-md-6">
+          <p><%= f.email_field :email, placeholder: 'Email', class: "form-control" %></p>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-12">
+          <p><%= f.text_area :body, placeholder: 'Body', class: "form-control", rows: "6" %></p>
+        </div>
+      </div>
+      <%= f.submit 'Send', class: 'btn btn-outline-dark' %>
+      <% end %>
+    </div>
+    <hr>
+    <div><%= link_to "Have a business inquiry?", new_message_path, class: 'btn btn-outline-dark' %></div>
+  </div>
+</div>

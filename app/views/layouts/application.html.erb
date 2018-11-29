@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Sturdy Star</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon-32x32.png'), :rel => 'icon', :type =>  'image/png' %>
+    
+</head>
+<body>
+                    <div class=""><%= render 'shared/application_nav' %></div>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                                <%= image_tag(
+                    "background.png",
+                    id: 'background',
+                    autoplay: true,
+                    loop: true,
+                    muted: true,
+                    poster: 'background.png'
+                ) 
+                %>
+                <div class="header">
+                <div class="nav-header">
+                </div>
+                </div>
+                    <%= alerts %>
+                <div class="verticle-center"><%= yield %></div>
+            </div>
+        </div>
+    </div>
+                    <%= copyright_generator %>
+</body>
+</html>
