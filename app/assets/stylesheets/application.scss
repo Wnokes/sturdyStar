@@ -2,6 +2,7 @@
 @import "gritter";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu');
 @import "jquery-ui";
+@import "font-awesome";
 
 /*
 * Globals
@@ -418,4 +419,14 @@ hr {
 
 .no-dot {
   list-style-type: none;
+}
+
+.fa {
+  font-size: 40px;
+  margin-left: 375px;
+}
+
+.padding-left {
+  padding-left: 50px;
+  align: right;
 }

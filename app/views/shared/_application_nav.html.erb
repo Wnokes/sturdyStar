@@ -3,6 +3,10 @@
 			<%#= image_tag("navbar.png", class: "circleBase type2", size: "80x80") %>
 			<nav class="nav nav-masthead app-nav">
 				<%= nav_helper 'nav-link', 'span' %>
+    				<span class="nav-link padding-left"><a href="https://www.facebook.com/treetopit/"><%= fa_icon "facebook" %></a></span>
+	    			<span href="https://www.facebook.com/treetopit/" class="nav-link padding-left"><a href="https://www.facebook.com/treetopit/"><%= markdown "Like Us
+    				On Facebook" %></a></span>
+				
 			</nav>
 			<% if signed_in? %>
 				<%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn about-us pageinate" %>

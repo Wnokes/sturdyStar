@@ -47,5 +47,6 @@ gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 
 ruby "2.4.0"
